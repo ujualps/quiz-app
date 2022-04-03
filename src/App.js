@@ -51,6 +51,7 @@ const QuestionContainer = ({
       <h2>{question.question}</h2>
       {question.options.map((option) => (
         <button
+          disabled={!!selected}
           style={{
             backgroundColor: selected
               ? option === question.answer
