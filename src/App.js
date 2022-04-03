@@ -8,7 +8,6 @@ const QuestionContainer = ({
   setNextQuestion,
   currentQuestion,
   total,
-  timeLeft,
   addCorrectAnswer,
   addWrongAnser,
 }) => {
@@ -46,7 +45,7 @@ const QuestionContainer = ({
     <div>
       <div style={{ display: "flex", justifyContent: "space-between" }}>
         <span>{`Question ${currentQuestion + 1}/${total}`}</span>
-        <span ref={timerRef}>{`Time left: ${timeLeft}`}</span>
+        <span ref={timerRef}></span>
       </div>
       <h2>{question.question}</h2>
       {question.options.map((option) => (
@@ -73,8 +72,6 @@ const QuestionContainer = ({
 
 function App() {
   const [currentQuestion, setCurrentQuestion] = useState(0);
-  const [timeLeft, setTimeLeft] = useState(0);
-  // const [timeRemaining, setTimeRemaining] = useState(0);
   const [correctAnswer, setCorrectAnswer] = useState(0);
   const [wrongAnswer, setWrongAnswer] = useState(0);
 
@@ -152,7 +149,6 @@ function App() {
           setNextQuestion={setNextQuestion}
           currentQuestion={currentQuestion}
           total={total}
-          timeLeft={timeLeft}
           addCorrectAnswer={addCorrectAnswer}
           addWrongAnser={addWrongAnser}
         />
