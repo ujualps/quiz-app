@@ -81,50 +81,40 @@ function App() {
 
   const questions = [
     {
-      question: "What is your name?",
-      options: ["real", "fake1", "fake2", "fake3"],
-      answer: "real",
+      question: "If we want define style for an unique element, then which css selector will we use ?",
+      options: ["id", "text", "class", "name"],
+      answer: "id",
     },
     {
-      question: "2What is your name?",
-      options: ["real", "fake1", "fake2", "fake3"],
-      answer: "real",
+      question: "If we don't want to allow a floating div to the left side of an element, which css property will we use ?",
+      options: ["margin", "clear", "float", "padding"],
+      answer: "clear",
     },
     {
-      question: "3What is your name?",
-      options: ["real", "fake1", "fake2", "fake3"],
-      answer: "real",
+      question: "Suppose we want to arragnge five nos. of DIVs so that DIV4 is placed above DIV1. Now, which css property will we use to control the order of stack?",
+      options: ["d-index", "s-index", "x-index", "z-index"],
+      answer: "z-index",
     },
     {
-      question: "4What is your name?",
-      options: ["real", "fake1", "fake2", "fake3"],
-      answer: "real",
+      question: "If we want to wrap a block of text around an image, which css property will we use ?",
+      options: ["wrap", "push", "float", "align"],
+      answer: "float",
     },
     {
-      question: "5What is your name?",
-      options: ["real", "fake1", "fake2", "fake3"],
-      answer: "real",
+      question: "If we want to show an Arrow as cursor, then which value we will use ?",
+      options: ["pointer", "default", "arrow", "arr"],
+      answer: "default",
     },
     {
-      question: "6What is your name?",
-      options: ["real", "fake1", "fake2", "fake3"],
-      answer: "real",
+      question: "If we want to use a nice looking green dotted border around an image, which css property will we use?",
+      options: ["border-color", "border-decoration", "border-style", "border-line"],
+      answer: "border-style",
     },
     {
-      question: "7What is your name?",
-      options: ["real", "fake1", "fake2", "fake3"],
-      answer: "real",
-    },
-    {
-      question: "8What is your name?",
-      options: ["real", "fake1", "fake2", "fake3"],
-      answer: "real",
-    },
-    {
-      question: "9What is your name?",
-      options: ["real", "fake1", "fake2", "fake3"],
-      answer: "real",
-    },
+      question: "Which of the following properties will we use to display border around a cell without any content ?",
+      options: ["empty-cell", "blank-cell", "noncontent-cell", "void-cell"],
+      answer: "empty-cell",
+    }
   ];
 
   const addCorrectAnswer = () => {
@@ -139,7 +129,7 @@ function App() {
     setCurrentQuestion(currentQuestion + 1);
   };
 
-  const total = 5;
+  const total = questions.length;
   return (
     <div className="App" style={{ padding: "2rem" }}>
       <h1>Quiz App</h1>
